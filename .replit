@@ -1,4 +1,4 @@
-run = ["bash", "main.sh"]
+run = ["bash", "single_serve.sh"]
 
 entrypoint = "main.sh"
 
