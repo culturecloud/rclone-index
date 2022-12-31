@@ -4,7 +4,7 @@ WORKDIR /usr/src/app
 
 ENV XDG_CONFIG_HOME=/config
 
-ENV PORT
+ARG PORT
 
 RUN apk --no-cache add curl unzip jq ca-certificates fuse tzdata && \
   echo "user_allow_other" >> /etc/fuse.conf
