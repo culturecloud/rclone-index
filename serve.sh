@@ -1,10 +1,17 @@
 #!/bin/bash
 
+if [ -f "/usr/local/bin/rclone" ]
+then
+    RCLONE_BIN="rclone"
+else
+    RCLONE_BIN="./rclone"
+fi
+
 echo ""
-./rclone -V
+$RCLONE_BIN -V
 echo ""
 
-./rclone serve webdav -v $SERVE_REMOTE: \
+$RCLONE_BIN serve webdav -v $SERVE_REMOTE: \
     --addr=:$PORT \
     --user=$AUTH_USER \
     --pass=$AUTH_PASS \
