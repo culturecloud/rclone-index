@@ -3,6 +3,3 @@ run = ["bash", "serve.sh"]
 entrypoint = "README.md"
 
 hidden = [".config"]
-
-[nix]
-channel = "unstable"

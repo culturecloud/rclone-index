@@ -1,7 +1,6 @@
 #!/bin/bash
 
-if [ -f ./rclone ]
-then
+if [ -f ./rclone ]; then
     mv ./rclone ./rclone.bak
 fi
 
