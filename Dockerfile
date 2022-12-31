@@ -18,4 +18,6 @@ RUN curl -O https://beta.rclone.org/rclone-beta-latest-linux-amd64.zip \
 
 RUN addgroup -g 1009 rclone && adduser -u 1009 -Ds /bin/sh -G rclone rclone
 
+EXPOSE $PORT:$PORT
+
 ENTRYPOINT [ "/bin/sh", "serve.sh" ]
