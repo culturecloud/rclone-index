@@ -1,5 +1,7 @@
+#!/bin/bash
+
 if [ -f ./rclone ]; then
-    rename ./rclone ./rclone.bak
+    mv ./rclone ./rclone.bak
 fi
 
 curl -O https://beta.rclone.org/rclone-beta-latest-linux-amd64.zip \

@@ -26,15 +26,12 @@ Modifications:  Adapted to rclone markup -->
 body {
 	font-family: monospace;
 	text-rendering: optimizespeed;
-	background-color: #000000;
+    color: white;
+	background-color: #272B30;
 }
 a {
-	color: #006ed3;
+	color: white;
 	text-decoration: none;
-}
-a:hover,
-h1 a:hover {
-	color: #319cff;
 }
 header,
 #summary {
@@ -52,7 +49,7 @@ td:last-child {
 header {
 	padding-top: 25px;
 	padding-bottom: 15px;
-	background-color: #ff0000;
+	background-color: #3A3F44;
 }
 h1 {
 	font-size: 20px;
@@ -60,10 +57,8 @@ h1 {
 	white-space: nowrap;
 	overflow-x: hidden;
 	text-overflow: ellipsis;
-	color: #999;
 }
 h1 a {
-	color: #fff;
 	margin: 0 4px;
 }
 h1 a:hover {
@@ -77,8 +72,7 @@ main {
 }
 .meta {
 	font-size: 12px;
-	font-family: Verdana, sans-serif;
-	border-bottom: 1px solid #9C9C9C;
+	border-bottom: none;
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
@@ -87,17 +81,17 @@ main {
 }
 #filter {
 	padding: 4px;
-	border: 1px solid #CCC;
+	border: 1px solid;
 }
 table {
 	width: 100%;
 	border-collapse: collapse;
 }
 tr {
-	border-bottom: 1px dashed #dadada;
+	border-bottom: 1px dashed;
 }
 tbody tr:hover {
-	background-color: none;
+	background-color: #1C1E22;
 }
 th,
 td {
@@ -110,19 +104,16 @@ th {
 	font-size: 16px;
 	white-space: nowrap;
 }
-th a {
-	color: #fff;
-}
 th svg {
 	vertical-align: middle;
 }
 td {
 	white-space: nowrap;
-	font-size: 14px;
+	font-size: 15px;
 }
 
 a:hover, h1 a:hover {
-	text-decoration: underline;
+	text-decoration: none;
 }
 
 td:nth-child(2) {
@@ -130,12 +121,10 @@ td:nth-child(2) {
 }
 td:nth-child(3) {
 	padding: 0 20px 0 20px;
-    color: white;
 }
 th:nth-child(4),
 td:nth-child(4) {
 	text-align: right;
-    color: white;
 }
 td:nth-child(2) svg {
 	position: absolute;
@@ -183,9 +172,6 @@ footer {
 	td:nth-child(3) {
 		padding-right: 5%;
 		text-align: right;
-	}
-	h1 {
-		color: #000;
 	}
 	h1 a {
 		margin: 0;
@@ -281,15 +267,14 @@ footer {
 					</tr>
 					{{- range .Entries}}
 					<tr class="file">
-						<td>
-						</td>
+                        <td></td>
 						<td>
 							{{- if .IsDir}}
 							<svg width="1.5em" height="1em" version="1.1" viewBox="0 0 317 259"><use xlink:href="#folder"></use></svg>
 							{{- else}}
 							<svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
 							{{- end}}
-							<span class="name"><a href="{{html .URL}}">{{html .Leaf}}</a></span>
+							<a href="{{html .URL}}"><span class="name">{{html .Leaf}}</span></a>
 						</td>
 						{{- if .IsDir}}
 						<td data-order="-1">&mdash;</td>

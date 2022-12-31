@@ -1,7 +1,7 @@
 { pkgs }: {
     deps = [
         pkgs.shfmt
-        pkgs.bashInteractive
+        pkgs.jq
         pkgs.curl
         pkgs.unzip
     ];

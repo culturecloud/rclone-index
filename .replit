@@ -1,5 +1,8 @@
-run = ["bash", "single_serve.sh"]
+run = ["bash", "serve.sh"]
 
-entrypoint = "main.sh"
+entrypoint = "README.md"
 
 hidden = [".config"]
+
+[nix]
+channel = "unstable"

@@ -11,7 +11,9 @@ Serve your Rclone remotes as public/private index through HTTP, on Replit!!
 - [x] Ease of use thanks to automated shell scripts.
 - [x] Dark mode.
 
-> NOTE: Most of them are features of Rclone.
+NOTES:
+- Most of them are features of Rclone.
+- File links will not change as long as you don't rename your remotes.
 
 ## Deploy Guide
 > W.I.P
