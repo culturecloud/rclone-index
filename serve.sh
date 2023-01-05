@@ -16,5 +16,5 @@ $RCLONE_BIN serve webdav -v $SERVE_REMOTE: \
     --user=$AUTH_USER \
     --pass=$AUTH_PASS \
     --template="templates/index.html" \
-    --vfs-cache-mode="writes" \
+    --vfs-cache-mode="full" \
     --poll-interval=0
