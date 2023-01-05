@@ -1,4 +1,4 @@
-run = ["bash", "serve.sh"]
+run = "reset; bash serve.sh"
 
 entrypoint = "README.md"
 
