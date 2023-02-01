@@ -1,6 +1,8 @@
-#!/bin/bash
+#!/bin/sh
 
-if [ -v 'REPL_SLUG' ]; then
+if [ '$REPL_SLUG' = '' ]; then
+    RCLONE_BIN='rclone'
+else
     if [ ! -f 'rclone' ]; then
         curl -sO https://beta.rclone.org/rclone-beta-latest-linux-amd64.zip \
         && unzip -q rclone-*-amd64.zip \
@@ -10,9 +12,7 @@ if [ -v 'REPL_SLUG' ]; then
         && chmod +x ./rclone \
         && rm -rf rclone-*-linux-amd64 rclone-*-linux-amd64.zip
     fi
-    RCLONE_BIN="./rclone"
-else
-    RCLONE_BIN="rclone"
+    RCLONE_BIN='./rclone'
 fi
 
 echo ""

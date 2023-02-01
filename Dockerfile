@@ -7,5 +7,5 @@ COPY . .
 
 RUN chmod 755 /culturecloud/
 
-ENTRYPOINT [ "/bin/bash" ]
+ENTRYPOINT [ "/bin/sh" ]
 CMD [ "./serve.sh" ]
