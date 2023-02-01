@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [ '$REPL_SLUG' = '' ]; then
+if [ -z '$REPL_SLUG' ]; then
     RCLONE_BIN='rclone'
 else
     if [ ! -f 'rclone' ]; then
