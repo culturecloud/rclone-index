@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [ -v 'REPL_SLUG' ]; then
+if [ -n 'REPL_SLUG' ]; then
     if [ ! -f 'rclone' ]; then
         curl -sO https://beta.rclone.org/rclone-beta-latest-linux-amd64.zip \
         && unzip -q rclone-*-amd64.zip \
