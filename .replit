@@ -1,5 +1,7 @@
 run = "reset; bash serve.sh"
 
 entrypoint = "README.md"
-
 hidden = [".config"]
+
+[nix]
+channel = "unstable"

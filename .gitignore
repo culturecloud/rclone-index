@@ -1,4 +1,5 @@
 .config/*
+docs/*
 
 rclone
 rclone.bak
