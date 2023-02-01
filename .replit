@@ -1,4 +1,4 @@
-run = "reset; bash serve.sh"
+run = "reset; bash serve-repl.sh"
 
 entrypoint = "README.md"
 hidden = [".config"]
